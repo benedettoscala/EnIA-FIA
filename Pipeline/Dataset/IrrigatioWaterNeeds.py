@@ -36,9 +36,9 @@ class CropWaterNeeds:
     def calculateKc( Kc, windspeed, humidity):
         cropK = Kc
         if windspeed < 2 and humidity > 80:
-            Kc = Kc - 0.5
+            cropK = Kc - 0.5
         if humidity < 50 and windspeed > 5:
-            Kc = Kc + 0.5
+            cropK = Kc + 0.5
         return cropK
     
     def calculateEffectivePrecipitation(precipitation):
@@ -62,7 +62,7 @@ class CropWaterNeeds:
         
 
 
-meteo = pandas.read_csv("C:/Users/scala/OneDrive/Desktop/FIA/EnIA/DatasetIrrigazione.csv")
+meteo = pandas.read_csv("Pipeline\Dataset\DatasetIrrigazione.csv")
 
 
 #cut the last 6 characters from the date
@@ -75,7 +75,7 @@ meteo = meteo.groupby(['time']).agg({'surface_pressure (hPa)': 'mean', 'soil_moi
 
 print(meteo.head())
 #get csv from meteo
-meteo.to_csv("C:/Users/scala/OneDrive/Desktop/FIA/EnIA/irrigazione.csv")
+meteo.to_csv("Pipeline\Dataset\irrigazione.csv")
 
 
 #Add an attribute named crop for each entry where you assign a random crop type value
@@ -102,7 +102,7 @@ meteo = meteo.round(2)
 
 
 #get a csv from meteo
-meteo.to_csv("C:/Users/scala/OneDrive/Desktop/FIA/EnIA/DatasetEnIA.csv")
+meteo.to_csv("Pipeline\Dataset\DatasetEnIA.csv")
 
 
 #print(meteo.head())
