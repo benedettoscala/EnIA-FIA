@@ -6,19 +6,6 @@ import pandas
 class CropWaterNeeds:
     CropType = ["Barley", "Bean", "Cabbage", "Carrot", "Cotton", "Cucumber", "Eggplant", "Grain", "Lentil", "Lettuce"]
     GrowthType = ["InitialStage", "CropDevStage", "MidSeasonStage", "LateSeasonStage"]
-    
-    DurationGrowth = {
-        "Barley":{"InitialStage":15, "CropDevStage": 25, "MidSeasonStage": 50, "LateSeasonStage": 30, "Total": 120},
-        "Bean": {"InitialStage": 15, "CropDevStage": 25, "MidSeasonStage": 25, "LateSeasonStage": 10, "Total": 75},
-        "Cabbage": {"InitialStage": 20, "CropDevStage": 25, "MidSeasonStage": 60, "LateSeasonStage": 15, "Total": 120},
-        "Carrot": {"InitialStage": 20, "CropDevStage": 30, "MidSeasonStage": 30, "LateSeasonStage": 70, "Total": 150},
-        "Cotton": {"InitialStage": 30, "CropDevStage": 50, "MidSeasonStage": 55, "LateSeasonStage": 45, "Total": 180},
-        "Cucumber": {"InitialStage": 20, "CropDevStage": 30, "MidSeasonStage": 40, "LateSeasonStage": 15, "Total": 105},
-        "Eggplant": {"InitialStage": 30, "CropDevStage": 40, "MidSeasonStage": 40, "LateSeasonStage": 20, "Total": 130},
-        "Grain" : {"InitialStage": 20, "CropDevStage": 30, "MidSeasonStage": 60, "LateSeasonStage": 40, "Total": 150},
-        "Lentil" : {"InitialStage": 20, "CropDevStage": 30, "MidSeasonStage": 60, "LateSeasonStage": 40, "Total": 150},
-        "Lettuce": {"InitialStage": 20, "CropDevStage": 30, "MidSeasonStage": 15, "LateSeasonStage": 10, "Total": 75}
-    }
 
     CropFactor = {
         "Barley": {"InitialStage": 0.35, "CropDevStage": 0.75, "MidSeasonStage": 1.15, "LateSeasonStage": 0.45},
