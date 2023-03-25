@@ -73,9 +73,6 @@ def getIrrigationDecision():
     #swap windspeed_10m (km/h) and rain(mm)
     data = df[["et0_fao_evapotranspiration (mm)", "rain (mm)", "windspeed_10m (km/h)", "relativehumidity_2m (%)", "weathercode (wmo code)", "Kc"]]
 
-    #append the value of Kc to the data
-
-
     #normalize daPredire
     daPredire = normalizer.transform(data)
 
@@ -94,10 +91,6 @@ def getIrrigationDecision():
         else:
             decisione.append(0)
 
-    nowDate = datetime.datetime.now()
-    ip = request.remote_addr
-    print(ip + " " + str(nowDate))
-
     result = {
         "longitudine": lon,
         "latitudine": lat,
@@ -105,11 +98,8 @@ def getIrrigationDecision():
         "stage": stage,
         "irrigationLevel": decisione
     }
-
     json = jsonify(result)
-
-    print(result)
-
+    
     return json
 
 if __name__ == '__main__':
