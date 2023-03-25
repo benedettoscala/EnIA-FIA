@@ -1,6 +1,6 @@
 # EnIA-FIA
 <div align = "center">
-<img src="logo_enia.png" alt="logo" width="600"/>
+<img src="logo_enia.png" alt="logo" width="200"/>
 <h2>Università degli Studi di Salerno</h2>
 Progetto combinato di <strong> "Ingegneria del Software" </strong> e <strong> "Fondamenti di Intelligenza Artificiale" </strong>
 </div>
